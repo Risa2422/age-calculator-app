@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.wrapper {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 700px;
+  width: 100%;
+  margin: 6rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border-bottom-right-radius: 8rem;
+}
+@media screen and (min-width: 767px) {
+  .wrapper {
+    border-bottom-right-radius: 18rem;
+  }
+}
+.wrapper .header .fieldwrapper {
+  display: flex;
+  gap: 2rem;
+  font-size: 10px;
+}
+.wrapper .header .day-form {
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 1%, 44%);
+  gap: 0.3rem;
+  font-weight: 700;
+}
+.wrapper .header .day-form label {
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+.wrapper .header .day-form input {
+  height: 55px;
+  max-width: 140px;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
+}
+.wrapper .header .submit {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+.wrapper .header .submit .line {
+  height: 1px;
+  background-color: hsl(0, 0%, 86%);
+  flex: 1;
+}
+@media screen and (min-width: 767px) {
+  .wrapper .header .submit .line:last-child {
+    display: none;
+  }
+}
+.wrapper .header .submit button {
+  flex: 0 0 60px;
+  background-image: url(./assets/images/icon-arrow.svg);
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 767px) {
+  .wrapper .header .submit button {
+    flex: 0 0 80px;
+    height: 80px;
+  }
+}
+.wrapper .content {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-style: italic;
+}
+.wrapper .content h2 {
+  margin: 0;
+  font-size: 3.6rem;
+  line-height: 1.2;
+}
+@media screen and (min-width: 767px) {
+  .wrapper .content h2 {
+    font-size: 4.7rem;
+  }
+}
+.wrapper .content .time {
+  color: hsl(259, 100%, 65%);
+  padding-right: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

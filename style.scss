@@ -1,0 +1,120 @@
+$color-gray: hsl(0, 0%, 94%);
+$color-white: hsl(0, 0%, 100%);
+$color-purple: hsl(259, 100%, 65%);
+$color-smokey-grey: hsl(0, 1%, 44%);
+$color-light-grey: hsl(0, 0%, 86%);
+$font-poppins: "Poppins", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-gray;
+  font-family: $font-poppins;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.wrapper {
+  background-color: $color-white;
+  max-width: 700px;
+  width: 100%;
+  margin: 6rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border-bottom-right-radius: 8rem;
+
+  @media screen and (min-width: 767px) {
+    border-bottom-right-radius: 18rem;
+  }
+  //   display: flex;
+
+  .header {
+    .fieldwrapper {
+      display: flex;
+      gap: 2rem;
+      font-size: 10px;
+    }
+
+    .day-form {
+      display: flex;
+      flex-direction: column;
+      color: $color-smokey-grey;
+      gap: 0.3rem;
+      font-weight: 700;
+
+      label {
+        letter-spacing: 3px;
+        font-size: 13px;
+      }
+
+      input {
+        height: 55px;
+        max-width: 140px;
+        width: 100%;
+        border: 1px solid $color-light-grey;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 25px;
+        font-family: $font-poppins;
+        padding: 15px;
+      }
+    }
+
+    .submit {
+      display: flex;
+      align-items: center;
+      margin: 30px 0;
+
+      .line {
+        height: 1px;
+        background-color: $color-light-grey;
+        flex: 1;
+        &:last-child {
+          //   flex: 0 0 0;
+          @media screen and (min-width: 767px) {
+            display: none;
+          }
+        }
+      }
+
+      button {
+        flex: 0 0 120px;
+        background-image: url(./assets/images/icon-arrow.svg);
+        height: 120px;
+        border: none;
+        border-radius: 50%;
+        background-color: $color-purple;
+        background-position: center center;
+        background-repeat: no-repeat;
+        @media screen and (min-width: 767px) {
+          flex: 0 0 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+
+  .content {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-style: italic;
+
+    h2 {
+      margin: 0;
+      font-size: 3.6rem;
+      line-height: 1.2;
+      @media screen and (min-width: 767px) {
+        font-size: 4.7rem;
+      }
+    }
+
+    .time {
+      color: $color-purple;
+      padding-right: 0.5rem;
+    }
+  }
+}
