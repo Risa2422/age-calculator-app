@@ -11,16 +11,17 @@ body {
 
 .wrapper {
   border-radius: 20px;
-  border-bottom-right-radius: 8rem;
-  background-color: hsl(0, 0%, 100%);
-  margin: 6rem auto;
+  border-bottom-right-radius: 7rem;
+  margin: 7rem 1rem;
   padding: 2rem;
+  background-color: hsl(0, 0%, 100%);
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 600px) {
   .wrapper {
-    border-bottom-right-radius: 18rem;
-    max-width: 767px;
+    border-bottom-right-radius: 15rem;
+    max-width: 600px;
     width: 100%;
+    margin: 6rem auto;
   }
 }
 .wrapper .header {
@@ -28,7 +29,7 @@ body {
 }
 .wrapper .header .fieldwrapper {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   font-size: 10px;
 }
 .wrapper .header .day-form {
@@ -43,27 +44,35 @@ body {
   font-size: 13px;
 }
 .wrapper .header .day-form input {
-  height: 55px;
-  max-width: 140px;
-  width: 100%;
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 5px;
+  height: 55px;
+  max-width: 140px;
+  padding: 10px;
+  width: 100%;
   font-weight: 600;
   font-size: 25px;
   font-family: "Poppins", sans-serif;
-  padding: 15px;
+}
+.wrapper .header .day-form span {
+  display: none;
+}
+.wrapper .header .day-form span.visible {
+  display: inline-block;
+  color: hsl(0, 100%, 67%);
+  font-weight: 300;
 }
 .wrapper .header .submit {
   display: flex;
   align-items: center;
-  margin: 30px 0;
+  margin: 30px 0 0;
 }
 .wrapper .header .submit .line {
+  flex: 1;
   height: 1px;
   background-color: hsl(0, 0%, 86%);
-  flex: 1;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 600px) {
   .wrapper .header .submit .line:last-child {
     display: none;
   }
@@ -78,30 +87,30 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 600px) {
   .wrapper .header .submit button {
     flex: 0 0 80px;
     height: 80px;
   }
 }
-.wrapper .content {
-  font-size: 3rem;
+.wrapper .header .content {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   font-style: italic;
+  font-size: 3rem;
 }
-.wrapper .content h2 {
+.wrapper .header .content h2 {
   margin: 0;
-  font-size: 3.6rem;
   line-height: 1.2;
+  font-size: 3rem;
 }
-@media screen and (min-width: 767px) {
-  .wrapper .content h2 {
+@media screen and (min-width: 600px) {
+  .wrapper .header .content h2 {
     font-size: 4.7rem;
   }
 }
-.wrapper .content .time {
+.wrapper .header .content .time {
   color: hsl(259, 100%, 65%);
   padding-right: 0.5rem;
 }
