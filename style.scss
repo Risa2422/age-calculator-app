@@ -1,8 +1,8 @@
 $color-gray: hsl(0, 0%, 94%);
 $color-white: hsl(0, 0%, 100%);
-$color-purple: hsl(259, 100%, 65%);
 $color-smokey-grey: hsl(0, 1%, 44%);
 $color-light-grey: hsl(0, 0%, 86%);
+$color-purple: hsl(259, 100%, 65%);
 $font-poppins: "Poppins", sans-serif;
 
 * {
@@ -17,20 +17,20 @@ body {
 }
 
 .wrapper {
-  background-color: $color-white;
-  max-width: 700px;
-  width: 100%;
-  margin: 6rem auto;
-  padding: 2.5rem;
   border-radius: 20px;
   border-bottom-right-radius: 8rem;
+  background-color: $color-white;
+  margin: 6rem auto;
+  padding: 2rem;
 
   @media screen and (min-width: 767px) {
     border-bottom-right-radius: 18rem;
+    max-width: 767px;
+    width: 100%;
   }
-  //   display: flex;
 
   .header {
+    width: 100%;
     .fieldwrapper {
       display: flex;
       gap: 2rem;
@@ -80,9 +80,9 @@ body {
       }
 
       button {
-        flex: 0 0 120px;
+        flex: 0 0 80px;
         background-image: url(./assets/images/icon-arrow.svg);
-        height: 120px;
+        height: 80px;
         border: none;
         border-radius: 50%;
         background-color: $color-purple;
