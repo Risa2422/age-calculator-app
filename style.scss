@@ -1,5 +1,5 @@
-$color-gray: hsl(0, 0%, 94%);
 $color-white: hsl(0, 0%, 100%);
+$color-gray: hsl(0, 0%, 94%);
 $color-light-grey: hsl(0, 0%, 86%);
 $color-smokey-grey: hsl(0, 1%, 44%);
 $color-purple: hsl(259, 100%, 65%);
@@ -50,6 +50,10 @@ body {
       label {
         letter-spacing: 3px;
         font-size: 13px;
+
+        &.labelError {
+          color: $color-light-red;
+        }
       }
 
       input {
@@ -62,10 +66,15 @@ body {
         font-weight: 600;
         font-size: 25px;
         font-family: $font-poppins;
+
+        &.error {
+          border-color: $color-light-red;
+        }
       }
 
       span {
         display: none;
+
         &.visible {
           display: inline-block;
           color: $color-light-red;
@@ -77,7 +86,7 @@ body {
     .submit {
       display: flex;
       align-items: center;
-      margin: 30px 0 0;
+      margin: 25px 0 0;
 
       .line {
         flex: 1;
