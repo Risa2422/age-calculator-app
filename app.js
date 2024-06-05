@@ -78,7 +78,26 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  dayOutput.innerHTML = days;
-  monthOutput.innerHTML = months;
-  yearOutput.innerHTML = years;
+  // Function to animate the counter
+  const animateCounter = (element, start, end) => {
+    const duration = 750; // Animation duration in milliseconds
+    const startTime = performance.now();
+    const step = (currentTime) => {
+      const progress = (currentTime - startTime) / duration;
+      const value = Math.round(start + progress * (end - start));
+      element.innerHTML = progress < 1 ? value : end;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+    requestAnimationFrame(step);
+  };
+
+  // Ensure initial values are numbers and set them to 0 if they are not
+  const parseOrDefault = (value, defaultValue) => isNaN(parseInt(value)) ? defaultValue : parseInt(value);
+
+  // Animate the counters
+  animateCounter(dayOutput, parseOrDefault(dayOutput.innerHTML, 0), days);
+  animateCounter(monthOutput, parseOrDefault(monthOutput.innerHTML, 0), months);
+  animateCounter(yearOutput, parseOrDefault(yearOutput.innerHTML, 0), years);
 });
